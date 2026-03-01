@@ -66,6 +66,24 @@ class ChartData {
   ChartData({required this.label, required this.wet, required this.dry, required this.recyclable});
 }
 
+class WasteTip {
+  final String id;
+  final String category;
+  final String title;
+  final String description;
+  final String impact;
+  final String icon;
+
+  WasteTip({
+    required this.id,
+    required this.category,
+    required this.title,
+    required this.description,
+    required this.impact,
+    required this.icon,
+  });
+}
+
 class WasteStore extends ChangeNotifier {
   List<WasteEntry> entries = [];
   UserProfile profile = UserProfile();
