@@ -6,6 +6,8 @@ import 'models.dart';
 import 'landing.dart';
 import 'dashboard.dart';
 
+import 'log.dart';
+
 void main() {
   runApp(
     ChangeNotifierProvider(
@@ -54,7 +56,7 @@ class _AppLayoutState extends State<AppLayout> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
     const DashboardScreen(),
-    const Center(child: Text('Log')),
+    const LogScreen(),
     const Center(child: Text('Analytics')),
     const Center(child: Text('Tips')),
     const Center(child: Text('Learn')),
