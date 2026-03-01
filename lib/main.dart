@@ -10,6 +10,7 @@ import 'log.dart';
 import 'analytics.dart';
 import 'tips.dart';
 import 'learn.dart';
+import 'community.dart';
 
 void main() {
   runApp(
@@ -63,7 +64,7 @@ class _AppLayoutState extends State<AppLayout> {
     const AnalyticsScreen(),
     const TipsScreen(),
     const LearnScreen(),
-    const Center(child: Text('Community')),
+    const CommunityScreen(),
   ];
 
   @override
