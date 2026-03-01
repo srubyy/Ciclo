@@ -80,7 +80,7 @@ class _LearnScreenState extends State<LearnScreen> {
                       children: [
                         const Icon(LucideIcons.clock, size: 14, color: Colors.grey),
                         const SizedBox(width: 4),
-                        Text('\${_selectedArticle!.readTime} min read', style: const TextStyle(color: Colors.grey, fontSize: 12)),
+                        Text('${_selectedArticle!.readTime} min read', style: const TextStyle(color: Colors.grey, fontSize: 12)),
                       ],
                     ),
                   ],
@@ -144,7 +144,7 @@ class _LearnScreenState extends State<LearnScreen> {
                       children: [
                         const Icon(LucideIcons.clock, size: 12, color: Colors.grey),
                         const SizedBox(width: 4),
-                        Text('\${article.readTime} min', style: const TextStyle(color: Colors.grey, fontSize: 12)),
+                        Text('${article.readTime} min', style: const TextStyle(color: Colors.grey, fontSize: 12)),
                       ],
                     ),
                     const Icon(LucideIcons.chevronRight, size: 16, color: Colors.grey),
