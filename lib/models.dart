@@ -57,6 +57,15 @@ class WasteStats {
   });
 }
 
+class ChartData {
+  final String label;
+  final double wet;
+  final double dry;
+  final double recyclable;
+
+  ChartData({required this.label, required this.wet, required this.dry, required this.recyclable});
+}
+
 class WasteStore extends ChangeNotifier {
   List<WasteEntry> entries = [];
   UserProfile profile = UserProfile();
@@ -116,6 +125,45 @@ class WasteStore extends ChangeNotifier {
       wetPercentage: total > 0 ? double.parse(((wet / total) * 100).toStringAsFixed(1)) : 0,
       recyclablePercentage: total > 0 ? double.parse(((rec / total) * 100).toStringAsFixed(1)) : 0,
     );
+  }
+
+  List<ChartData> getWeeklyData() {
+    // Generate dummy weekly data based on entries if entries exist, else return empty
+    if (entries.isEmpty) return [];
+    
+    // Group by last 7 days roughly for demo
+    List<ChartData> data = [];
+    final labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    
+    for (int i = 0; i < 7; i++) {
+        // Just spread the existing averages randomly to fake real chart data
+        double base = entries.isNotEmpty ? (entries.fold(0.0, (s, e) => s + e.wet) / entries.length) : 0;
+        data.add(ChartData(
+            label: labels[i],
+            wet: double.parse((base * (0.8 + Random().nextDouble() * 0.4)).toStringAsFixed(2)),
+            dry: double.parse((base * (0.5 + Random().nextDouble() * 0.4)).toStringAsFixed(2)),
+            recyclable: double.parse((base * (0.2 + Random().nextDouble() * 0.3)).toStringAsFixed(2)),
+        ));
+    }
+    return data;
+  }
+
+  List<ChartData> getMonthlyData() {
+    if (entries.isEmpty) return [];
+    
+    List<ChartData> data = [];
+    final labels = ['Week 1', 'Week 2', 'Week 3', 'Week 4'];
+    
+    for (int i = 0; i < 4; i++) {
+        double base = entries.isNotEmpty ? (entries.fold(0.0, (s, e) => s + e.wet) / entries.length) * 7 : 0;
+        data.add(ChartData(
+            label: labels[i],
+            wet: double.parse((base * (0.8 + Random().nextDouble() * 0.4)).toStringAsFixed(2)),
+            dry: double.parse((base * (0.5 + Random().nextDouble() * 0.4)).toStringAsFixed(2)),
+            recyclable: double.parse((base * (0.2 + Random().nextDouble() * 0.3)).toStringAsFixed(2)),
+        ));
+    }
+    return data;
   }
 
   void seedDemoData() {

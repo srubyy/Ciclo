@@ -7,6 +7,7 @@ import 'landing.dart';
 import 'dashboard.dart';
 
 import 'log.dart';
+import 'analytics.dart';
 
 void main() {
   runApp(
@@ -57,7 +58,7 @@ class _AppLayoutState extends State<AppLayout> {
   final List<Widget> _pages = [
     const DashboardScreen(),
     const LogScreen(),
-    const Center(child: Text('Analytics')),
+    const AnalyticsScreen(),
     const Center(child: Text('Tips')),
     const Center(child: Text('Learn')),
     const Center(child: Text('Community')),
