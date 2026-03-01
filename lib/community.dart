@@ -111,7 +111,7 @@ class CommunityScreen extends StatelessWidget {
                             ],
                           ),
                           const SizedBox(height: 8),
-                          Text('Based on \${store.profile.familySize} family members', style: const TextStyle(color: Colors.grey, fontSize: 12)),
+                          Text('Based on ${store.profile.familySize} family members', style: const TextStyle(color: Colors.grey, fontSize: 12)),
                         ],
                       ),
                     ),
@@ -154,7 +154,7 @@ class CommunityScreen extends StatelessWidget {
                         children: [
                           const Text('YOUR STANDING', style: TextStyle(fontSize: 10, color: Colors.grey, fontWeight: FontWeight.bold, letterSpacing: 1.5)),
                           const SizedBox(height: 12),
-                          Text('\${diff <= 0 ? '▼' : '▲'} \${pctDiff.replaceAll('-', '')}%', style: TextStyle(color: diff <= 0 ? Colors.green.shade400 : Colors.red.shade400, fontSize: 28, fontWeight: FontWeight.bold, height: 1.1)),
+                          Text("${diff <= 0 ? '▼' : '▲'} ${pctDiff.replaceAll('-', '')}%", style: TextStyle(color: diff <= 0 ? Colors.green.shade400 : Colors.red.shade400, fontSize: 28, fontWeight: FontWeight.bold, height: 1.1)),
                           const SizedBox(height: 8),
                           Text(store.entries.isEmpty ? 'Log data to compare' : (diff <= 0 ? 'Below community average 🎉' : 'Above community average'), style: const TextStyle(color: Colors.grey, fontSize: 12)),
                         ],
