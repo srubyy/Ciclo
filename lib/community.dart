@@ -255,12 +255,74 @@ class CommunityScreen extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Text('Radar Chart Placeholder', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 14)),
+                              const Text('You vs. Community', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 14)),
                               const SizedBox(height: 24),
-                              const Expanded(
-                                child: Center(
-                                  child: Text('Note: fl_chart does not have a RadarChart built-in natively at this exact complexity scope without heavily customizing polygons. To preserve stability, this is omitted from the Flutter UI map.', textAlign: TextAlign.center, style: TextStyle(color: Colors.grey))
-                                )
+                              Expanded(
+                                child: RadarChart(
+                                  RadarChartData(
+                                    dataSets: [
+                                      RadarDataSet(
+                                        fillColor: const Color(0xFF4ade80).withOpacity(0.15),
+                                        borderColor: const Color(0xFF4ade80),
+                                        entryRadius: 0,
+                                        borderWidth: 2,
+                                        dataEntries: [
+                                          RadarEntry(value: stats.wetPercentage),
+                                          RadarEntry(value: stats.dryPercentage),
+                                          RadarEntry(value: stats.recyclablePercentage),
+                                          RadarEntry(value: stats.recyclablePercentage > 15 ? 75 : 40),
+                                          RadarEntry(value: diff < 0 ? 80 : 40),
+                                        ],
+                                      ),
+                                      RadarDataSet(
+                                        fillColor: const Color(0xFF9ca3af).withOpacity(0.1),
+                                        borderColor: const Color(0xFF9ca3af),
+                                        entryRadius: 0,
+                                        borderWidth: 1.5,
+                                        dataEntries: [
+                                          const RadarEntry(value: 55),
+                                          const RadarEntry(value: 35),
+                                          const RadarEntry(value: 15),
+                                          const RadarEntry(value: 55),
+                                          const RadarEntry(value: 50),
+                                        ],
+                                      ),
+                                    ],
+                                    radarBackgroundColor: Colors.transparent,
+                                    borderData: FlBorderData(show: false),
+                                    radarBorderData: const BorderSide(color: Colors.transparent),
+                                    radarShape: RadarShape.polygon,
+                                    tickCount: 4,
+                                    ticksTextStyle: const TextStyle(color: Colors.transparent, fontSize: 0),
+                                    tickBorderData: const BorderSide(color: Colors.white10),
+                                    gridBorderData: const BorderSide(color: Colors.white10),
+                                    getTitle: (index, angle) {
+                                      switch (index) {
+                                        case 0: return const RadarChartTitle(text: 'Wet Waste');
+                                        case 1: return const RadarChartTitle(text: 'Dry Waste');
+                                        case 2: return const RadarChartTitle(text: 'Recyclable');
+                                        case 3: return const RadarChartTitle(text: 'Segregation');
+                                        case 4: return const RadarChartTitle(text: 'Reduction');
+                                        default: return const RadarChartTitle(text: '');
+                                      }
+                                    },
+                                    titleTextStyle: const TextStyle(color: Colors.grey, fontSize: 11),
+                                  ),
+                                  duration: const Duration(milliseconds: 150),
+                                ),
+                              ),
+                              const SizedBox(height: 12),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(width: 12, height: 12, color: const Color(0xFF9ca3af)),
+                                  const SizedBox(width: 8),
+                                  const Text('Community', style: TextStyle(color: Colors.grey, fontSize: 13)),
+                                  const SizedBox(width: 24),
+                                  Container(width: 12, height: 12, color: const Color(0xFF4ade80)),
+                                  const SizedBox(width: 8),
+                                  const Text('You', style: TextStyle(color: Color(0xFF4ade80), fontSize: 13)),
+                                ],
                               )
                             ],
                           )
