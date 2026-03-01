@@ -1,0 +1,58 @@
+import 'models.dart';
+
+final List<LearnArticle> learnArticles = [
+  LearnArticle(
+    id: 'a1',
+    title: 'Wet vs. Dry: Know Your Waste',
+    category: 'Segregation Basics',
+    summary: 'Understanding the fundamental difference between wet and dry waste is the first step to effective household management.',
+    content: 'Wet waste includes all biodegradable items: vegetable peels, fruit scraps, cooked food leftovers, tea/coffee grounds, and garden trimmings. Dry waste encompasses non-biodegradable materials that can still be recycled or must be sent to landfill — plastic wrappers, packaging, cardboard, glass bottles, and metal cans. The key rule: keep them separate from the point of generation.',
+    icon: '🗑️',
+    readTime: 3,
+  ),
+  LearnArticle(
+    id: 'a2',
+    title: 'The Plastic Problem at Home',
+    category: 'Plastics',
+    summary: 'Single-use plastics dominate household dry waste. Here\'s how to identify, reduce, and responsibly dispose of them.',
+    content: 'Survey findings across Mumbai households reveal that single-use plastics — bags, sachets, wrappers — constitute up to 40% of dry waste. To reduce: carry cloth bags, buy loose produce instead of packaged, opt for glass/steel containers, and refuse plastic cutlery at restaurants. When unavoidable, ensure plastics are clean and dry before placing in the recyclables bin.',
+    icon: '🔬',
+    readTime: 4,
+  ),
+  LearnArticle(
+    id: 'a3',
+    title: 'Composting at Home',
+    category: 'Wet Waste',
+    summary: 'Transform kitchen scraps into nutrient-rich compost with a simple bin setup requiring just 10 minutes a week.',
+    content: 'A basic compost bin needs: a ventilated container, brown materials (dry leaves, shredded paper) and green materials (kitchen scraps). Layer browns and greens in equal parts, keep moist, and turn weekly. In 6-8 weeks, you have compost for your plants. Items to compost: vegetable peels, eggshells, coffee grounds, fruit scraps. Avoid: meat, dairy, and oily foods.',
+    icon: '🌱',
+    readTime: 5,
+  ),
+  LearnArticle(
+    id: 'a4',
+    title: 'Recycling Right: The Contamination Problem',
+    category: 'Recycling',
+    summary: 'Contaminated recyclables end up in landfills. Learn which materials are truly recyclable in Indian cities.',
+    content: 'Recyclable dry waste includes: clean PET bottles (#1), HDPE containers (#2), paper/cardboard, glass bottles, aluminum cans, and ferrous metals. Non-recyclable dry waste includes: soiled plastics, composite packaging (chips bags, tetra packs), ceramic, styrofoam, and broken glass. The golden rule: when in doubt, throw it in landfill waste rather than contaminate a recyclable batch.',
+    icon: '♻️',
+    readTime: 4,
+  ),
+  LearnArticle(
+    id: 'a5',
+    title: 'SDGs and Your Household',
+    category: 'Sustainability',
+    summary: 'How your daily waste logging directly contributes to UN Sustainable Development Goals 11, 12, and 13.',
+    content: 'SDG 12 (Responsible Consumption) calls for halving per capita food waste by 2030. SDG 11 (Sustainable Cities) requires accessible waste management for all urban households. SDG 13 (Climate Action) recognizes that organic waste in landfills generates methane — a greenhouse gas 25x more potent than CO₂. By tracking and reducing your household waste, you are a frontline actor in achieving these global goals.',
+    icon: '🌍',
+    readTime: 3,
+  ),
+  LearnArticle(
+    id: 'a6',
+    title: 'Understanding Your Waste Analytics',
+    category: 'App Guide',
+    summary: 'Make the most of Ciclo\'s analytics — learn what each chart and metric means for your household.',
+    content: 'The composition pie chart shows the percentage split between wet, dry, and recyclable waste. Ideally, aim for: Wet < 50% (the rest composted), Dry < 20%, Recyclable > 30%. The weekly trend chart reveals your peak generation days (usually weekends). The community benchmark compares your per-capita daily average against surveyed households in Mumbai. Use these insights to set weekly reduction targets.',
+    icon: '📊',
+    readTime: 4,
+  ),
+];

@@ -84,6 +84,26 @@ class WasteTip {
   });
 }
 
+class LearnArticle {
+  final String id;
+  final String title;
+  final String category;
+  final String summary;
+  final String content;
+  final String icon;
+  final int readTime;
+
+  LearnArticle({
+    required this.id,
+    required this.title,
+    required this.category,
+    required this.summary,
+    required this.content,
+    required this.icon,
+    required this.readTime,
+  });
+}
+
 class WasteStore extends ChangeNotifier {
   List<WasteEntry> entries = [];
   UserProfile profile = UserProfile();
