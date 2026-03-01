@@ -45,6 +45,7 @@ class DashboardScreen extends StatelessWidget {
         }
 
         final stats = store.getStats();
+        final weeklyData = store.getWeeklyData();
 
         return SingleChildScrollView(
           padding: const EdgeInsets.all(32),
@@ -109,14 +110,58 @@ class DashboardScreen extends StatelessWidget {
                   ),
                   const SizedBox(width: 16),
                   
-                  // Empty space wrapper to keep same aspect ratio visually
+                  // Weekly Bar Chart
                   Expanded(
                     flex: 2,
                     child: Container(
                       height: 300,
                       padding: const EdgeInsets.all(24),
                       decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white12), borderRadius: BorderRadius.circular(16)),
-                      child: const Center(child: Text("Weekly Bar Chart Area\n(To be configured with fl_chart)", textAlign: TextAlign.center, style: TextStyle(color: Colors.grey))),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text('Weekly Trend', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 14)),
+                          const SizedBox(height: 24),
+                          Expanded(
+                            child: BarChart(
+                              BarChartData(
+                                alignment: BarChartAlignment.spaceAround,
+                                gridData: FlGridData(show: true, drawVerticalLine: false, getDrawingHorizontalLine: (value) => FlLine(color: Colors.white10, strokeWidth: 1, dashArray: [3, 3])),
+                                borderData: FlBorderData(show: false),
+                                titlesData: FlTitlesData(
+                                  leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: true, reservedSize: 30, getTitlesWidget: (val, meta) => Text(val.toStringAsFixed(0), style: const TextStyle(color: Colors.grey, fontSize: 11)))),
+                                  rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                                  topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                                  bottomTitles: AxisTitles(
+                                    sideTitles: SideTitles(
+                                      showTitles: true,
+                                      getTitlesWidget: (val, meta) {
+                                        if (val.toInt() >= 0 && val.toInt() < weeklyData.length) {
+                                          return Padding(
+                                              padding: const EdgeInsets.only(top: 8),
+                                              child: Text(weeklyData[val.toInt()].label.substring(0, 3), style: const TextStyle(color: Colors.grey, fontSize: 11)));
+                                        }
+                                        return const SizedBox.shrink();
+                                      },
+                                    ),
+                                  ),
+                                ),
+                                barGroups: List.generate(
+                                  weeklyData.length,
+                                  (i) => BarChartGroupData(
+                                    x: i,
+                                    barRods: [
+                                      BarChartRodData(toY: weeklyData[i].wet, color: const Color(0xFF2dd4bf), width: 6, borderRadius: const BorderRadius.only(topLeft: Radius.circular(3), topRight: Radius.circular(3))),
+                                      BarChartRodData(toY: weeklyData[i].dry, color: const Color(0xFFf59e0b), width: 6, borderRadius: const BorderRadius.only(topLeft: Radius.circular(3), topRight: Radius.circular(3))),
+                                      BarChartRodData(toY: weeklyData[i].recyclable, color: const Color(0xFF60a5fa), width: 6, borderRadius: const BorderRadius.only(topLeft: Radius.circular(3), topRight: Radius.circular(3))),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   )
                 ],
