@@ -52,7 +52,7 @@ class LandingScreen extends StatelessWidget {
                 children: [
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                    decoration: BoxDecoration(border: Border.all(color: const Color(0xFF4ade80).withOpacity(0.3)), borderRadius: BorderRadius.circular(20), color: const Color(0xFF4ade80).withOpacity(0.1)),
+                    decoration: BoxDecoration(border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(20), color: const Color(0xFF4ade80).withOpacity(0.1)),
                     child: const Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [

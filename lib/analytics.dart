@@ -63,7 +63,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
               Container(
                 height: 300,
                 padding: const EdgeInsets.all(24),
-                decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white12), borderRadius: BorderRadius.circular(16)),
+                decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(16)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -114,7 +114,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                     child: Container(
                       height: 300,
                       padding: const EdgeInsets.all(24),
-                      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white12), borderRadius: BorderRadius.circular(16)),
+                      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(16)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -169,7 +169,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                     child: Container(
                       height: 300,
                       padding: const EdgeInsets.all(24),
-                      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white12), borderRadius: BorderRadius.circular(16)),
+                      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(16)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -199,7 +199,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
               // Summary
               Container(
                 padding: const EdgeInsets.all(24),
-                decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white12), borderRadius: BorderRadius.circular(16)),
+                decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(16)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

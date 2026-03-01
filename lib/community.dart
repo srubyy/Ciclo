@@ -56,7 +56,7 @@ class CommunityScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(24),
                 decoration: BoxDecoration(
                   color: const Color(0xFF141f18),
-                  border: Border.all(color: Colors.white24),
+                  border: Border.all(color: Colors.white),
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Row(
@@ -96,7 +96,7 @@ class CommunityScreen extends StatelessWidget {
                   Expanded(
                     child: Container(
                       padding: const EdgeInsets.all(20),
-                      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white24), borderRadius: BorderRadius.circular(16)),
+                      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(16)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -120,7 +120,7 @@ class CommunityScreen extends StatelessWidget {
                   Expanded(
                     child: Container(
                       padding: const EdgeInsets.all(20),
-                      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white24), borderRadius: BorderRadius.circular(16)),
+                      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(16)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -146,7 +146,7 @@ class CommunityScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         color: diff <= 0 ? Colors.green.withOpacity(0.08) : Colors.red.withOpacity(0.08),
-                        border: Border.all(color: Colors.white24),
+                        border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(16)
                       ),
                       child: Column(
@@ -169,7 +169,7 @@ class CommunityScreen extends StatelessWidget {
               Container(
                 height: 300,
                 padding: const EdgeInsets.all(24),
-                decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white24), borderRadius: BorderRadius.circular(16)),
+                decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(16)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -226,7 +226,7 @@ class CommunityScreen extends StatelessWidget {
                   Expanded(
                     child: Container(
                       padding: const EdgeInsets.all(24),
-                      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white24), borderRadius: BorderRadius.circular(16)),
+                      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(16)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -251,7 +251,7 @@ class CommunityScreen extends StatelessWidget {
                         child: Container(
                           height: 320, // matching rough height of Findings
                           padding: const EdgeInsets.all(24),
-                          decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white24), borderRadius: BorderRadius.circular(16)),
+                          decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(16)),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -344,7 +344,7 @@ class CommunityScreen extends StatelessWidget {
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.03),
-        border: Border.all(color: Colors.white24),
+        border: Border.all(color: Colors.white),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(

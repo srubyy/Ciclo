@@ -81,7 +81,7 @@ class DashboardScreen extends StatelessWidget {
                     child: Container(
                       height: 300,
                       padding: const EdgeInsets.all(24),
-                      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white12), borderRadius: BorderRadius.circular(16)),
+                      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(16)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -116,7 +116,7 @@ class DashboardScreen extends StatelessWidget {
                     child: Container(
                       height: 300,
                       padding: const EdgeInsets.all(24),
-                      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white12), borderRadius: BorderRadius.circular(16)),
+                      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(16)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -188,7 +188,7 @@ class DashboardScreen extends StatelessWidget {
   Widget _statCard(String label, String value, String unit, String icon, Color color) {
     return Container(
       padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(color: color.withOpacity(0.1), border: Border.all(color: color.withOpacity(0.2)), borderRadius: BorderRadius.circular(16)),
+      decoration: BoxDecoration(color: color.withOpacity(0.1), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(16)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -235,7 +235,7 @@ class DashboardScreen extends StatelessWidget {
   Widget _progressBar(String label, double pct, Color color) {
     return Container(
       padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(color: color.withOpacity(0.05), border: Border.all(color: Colors.white12), borderRadius: BorderRadius.circular(16)),
+      decoration: BoxDecoration(color: color.withOpacity(0.05), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(16)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

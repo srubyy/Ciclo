@@ -57,7 +57,7 @@ class _LearnScreenState extends State<LearnScreen> {
             padding: const EdgeInsets.all(32),
             decoration: BoxDecoration(
               color: const Color(0xFF141f18),
-              border: Border.all(color: Colors.white12),
+              border: Border.all(color: Colors.white),
               borderRadius: BorderRadius.circular(16),
             ),
             child: Column(
@@ -70,7 +70,7 @@ class _LearnScreenState extends State<LearnScreen> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                       decoration: BoxDecoration(
-                        border: Border.all(color: const Color(0xFF4ade80).withOpacity(0.3)),
+                        border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: Text(_selectedArticle!.category.toUpperCase(), style: const TextStyle(color: Color(0xFF4ade80), fontSize: 10, letterSpacing: 1.5, fontWeight: FontWeight.bold)),
@@ -123,7 +123,7 @@ class _LearnScreenState extends State<LearnScreen> {
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
               color: const Color(0xFF141f18),
-              border: Border.all(color: Colors.white12),
+              border: Border.all(color: Colors.white),
               borderRadius: BorderRadius.circular(16),
             ),
             child: Column(
@@ -163,7 +163,7 @@ class _LearnScreenState extends State<LearnScreen> {
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
         color: const Color(0xFF141f18),
-        border: Border.all(color: Colors.white12),
+        border: Border.all(color: Colors.white),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -209,7 +209,7 @@ class _LearnScreenState extends State<LearnScreen> {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: color.withOpacity(0.08),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: Colors.white),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(

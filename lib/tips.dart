@@ -45,7 +45,7 @@ class TipsScreen extends StatelessWidget {
               // Composition Summary Card
               Container(
                 padding: const EdgeInsets.all(24),
-                decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white12), borderRadius: BorderRadius.circular(16)),
+                decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(16)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -150,7 +150,7 @@ class TipsScreen extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: const Color(0xFF141f18),
-        border: Border.all(color: Colors.white12),
+        border: Border.all(color: Colors.white),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -163,7 +163,7 @@ class TipsScreen extends StatelessWidget {
               Text(tip.icon, style: const TextStyle(fontSize: 24)),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                decoration: BoxDecoration(color: impactBg, border: Border.all(color: impactBorder), borderRadius: BorderRadius.circular(12)),
+                decoration: BoxDecoration(color: impactBg, border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(12)),
                 child: Text('${tip.impact} impact'.toUpperCase(), style: TextStyle(color: impactText, fontSize: 10, fontWeight: FontWeight.bold, letterSpacing: 1)),
               ),
             ],

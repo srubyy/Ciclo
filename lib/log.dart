@@ -107,7 +107,7 @@ class _LogScreenState extends State<LogScreen> {
                   // Form Card
                   Container(
                     padding: const EdgeInsets.all(24),
-                    decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white12), borderRadius: BorderRadius.circular(16)),
+                    decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(16)),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -118,7 +118,7 @@ class _LogScreenState extends State<LogScreen> {
                           child: Container(
                             width: double.infinity,
                             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-                            decoration: BoxDecoration(color: Colors.black.withOpacity(0.3), border: Border.all(color: Colors.white10), borderRadius: BorderRadius.circular(12)),
+                            decoration: BoxDecoration(color: Colors.black.withOpacity(0.3), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(12)),
                             child: Text(
                               "${_selectedDate.year}-${_selectedDate.month.toString().padLeft(2, '0')}-${_selectedDate.day.toString().padLeft(2, '0')}",
                               style: const TextStyle(color: Colors.white, fontSize: 14),
@@ -180,7 +180,7 @@ class _LogScreenState extends State<LogScreen> {
                   Container(
                     margin: const EdgeInsets.only(top: 24),
                     padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white10), borderRadius: BorderRadius.circular(12)),
+                    decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(12)),
                     child: Row(
                       children: [
                         const Text('💡', style: TextStyle(fontSize: 20)),
@@ -247,7 +247,7 @@ class _LogScreenState extends State<LogScreen> {
     return Container(
       margin: const EdgeInsets.only(bottom: 8),
       padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white10), borderRadius: BorderRadius.circular(12)),
+      decoration: BoxDecoration(color: const Color(0xFF141f18), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(12)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -288,7 +288,7 @@ class _LogScreenState extends State<LogScreen> {
   Widget _badge(String type, double value, Color color) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-      decoration: BoxDecoration(color: color.withOpacity(0.1), border: Border.all(color: color.withOpacity(0.2)), borderRadius: BorderRadius.circular(4)),
+      decoration: BoxDecoration(color: color.withOpacity(0.1), border: Border.all(color: Colors.white), borderRadius: BorderRadius.circular(4)),
       child: Row(
         children: [
           Container(width: 6, height: 6, decoration: BoxDecoration(color: color, shape: BoxShape.circle)),
