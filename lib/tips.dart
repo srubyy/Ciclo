@@ -74,7 +74,7 @@ class TipsScreen extends StatelessWidget {
                   crossAxisSpacing: 16,
                   mainAxisSpacing: 16,
                   childAspectRatio: 1.5,
-                  mainAxisExtent: 180, // fixed height for tip cards
+                  mainAxisExtent: 220, // Increased fixed height for tip cards so text doesn't cut
                 ),
                 itemCount: tips.length,
                 itemBuilder: (context, index) {
@@ -169,9 +169,9 @@ class TipsScreen extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
-          Text(tip.title, style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600), maxLines: 1, overflow: TextOverflow.ellipsis),
+          Text(tip.title, style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600), maxLines: 2, overflow: TextOverflow.ellipsis),
           const SizedBox(height: 6),
-          Expanded(child: Text(tip.description, style: const TextStyle(color: Colors.white60, fontSize: 12, height: 1.4), maxLines: 3, overflow: TextOverflow.ellipsis)),
+          Expanded(child: Text(tip.description, style: const TextStyle(color: Colors.white60, fontSize: 12, height: 1.4), maxLines: 4, overflow: TextOverflow.ellipsis)),
           const SizedBox(height: 12),
           Container(
             width: double.infinity,
